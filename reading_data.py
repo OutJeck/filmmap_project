@@ -1,7 +1,6 @@
 import haversine
 from opencage.geocoder import OpenCageGeocode
-key = 'eb6b80413896491c882adeb4203d4aa8'
-# key = 'd8cb447f8f7a4eccbdef25d14c3c69e2'
+key = 'Enter OpenCage API key here'
 geocoder = OpenCageGeocode(key)
 
 
@@ -28,7 +27,7 @@ def reading_file(name_f, country, year):
     elif country == 'United Kingdom':
         country = 'UK'
 
-    with open(name_f, 'r') as file:
+    with open(name_f, 'r', encoding='utf-8', errors='ignore') as file:
         n = 0
         for line in file:
             var_l = []
